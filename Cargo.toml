@@ -1,0 +1,6 @@
+[workspace]
+members = [
+  "src/services/tu_sg/modules/tu_sg",
+  "src/modules/tu_volumes",
+  "src/modules/tu_ipfs"
+]

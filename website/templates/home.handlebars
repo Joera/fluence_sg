@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{body.title}}</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="{{assets_url}}/styles.css">
+  <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7060374/6317832/css/fonts.css" />
+</head>
+<body>
+ 
+  <main>
+    <section class="container">
+      <ul>
+      {{#each collections as |post|}}
+        <li><a href="./{{slugify post.title}}.html">{{post.title}}</a></li>
+      {{/each}}
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,17 @@
+[package]
+name = "tu_volumes"
+version = "0.1.0"
+edition = "2018"
+
+[[bin]]
+name = "tu_volumes"
+path = "src/main.rs"
+
+[dependencies]
+marine-rs-sdk = "0.7.1"
+serde_json = "*"
+tu_types = { path = "../../../../tu_rust_types" }
+
+
+[dev-dependencies]
+marine-rs-sdk-test = "0.9.0"

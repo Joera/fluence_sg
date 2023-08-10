@@ -1,0 +1,24 @@
+[package]
+name = "tu_sg"
+version = "0.1.0"
+edition = "2018"
+
+[[bin]]
+name = "tu_sg"
+path = "src/main.rs"
+
+[dependencies]
+handlebars = "4.3.7"
+marine-rs-sdk = "0.7.1"
+marine-sqlite-connector = "0.8.0"
+regex = "1.5"
+serde = "1.0.171"
+serde_json = "*"
+tu_types = { path = "../../../../../../tu_rust_types" }
+multihash = "0.19.0"
+
+
+
+
+[dev-dependencies]
+marine-rs-sdk-test = "0.9.0"
