@@ -8,6 +8,6 @@ version: 0
 type: rust
 name: tu_volumes
 volumes:
-  content: "../obsidian/content/"
-  templates: "../publication/templates/"
-  html: "../publication/public/"
+  content: "./author/content/"
+  templates: "./publication/templates/"
+  html: "./publication/public/"

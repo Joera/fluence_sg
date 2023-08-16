@@ -15,7 +15,7 @@ marine-sqlite-connector = "0.8.0"
 regex = "1.5"
 serde = "1.0.171"
 serde_json = "*"
-tu_types = { path = "../../../../../../tu_rust_types" }
+tu_types = { path = "../../../../../../../tu_rust_types" }
 multihash = "0.19.0"
 thiserror = "1.0"
 

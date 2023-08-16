@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{body.title}}</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="{{assets_url}}/styles.css">
+  <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7060374/6317832/css/fonts.css" />
+</head>
+<body>
+ 
+  <main>
+    <section id="home_gallery" class="large-container">
+       <div>
+        <img src="http://unamore.com/admin/wp-content/uploads/2015/01/rosa_parks_en_malcolm_x-1024x810.jpg" />
+      </div>
+         <div>
+        <img src="http://unamore.com/admin/wp-content/uploads/2014/12/10614-1024x1016.jpg" />
+      </div>
+      <div>
+        <img src="https://unamore.com/admin/wp-content/uploads/2014/07/12161-rivier-de-seine-a-paris1-1024x1020.jpg" />
+      </div>
+  
+      <div>
+        <img src="http://unamore.com/admin/wp-content/uploads/2015/01/aquarius_energie-1024x858.jpg" />
+      </div>
+      <div>
+        <img src="http://unamore.com/admin/wp-content/uploads/2014/07/10211-881x1024.jpg" />
+      </div>
+      {{!-- <div>
+        <img src="http://unamore.com/admin/wp-content/uploads/2015/01/meester_jezus-860x1024.jpg" />
+      </div> --}}
+     
+      <div>
+        <img src="http://unamore.com/admin/wp-content/uploads/2014/07/10834-865x1024.jpg" />
+      </div>
+      <div>
+        <img src="http://unamore.com/admin/wp-content/uploads/2014/08/10155vrijage.jpg" />
+      </div>
+      
+   
+    </section>
+    <section class="container">
+
+      {{ map_unique "years" collections.posts  }}
+      <ul>
+      {{#each years as |year| }}
+          <li class="year_breaker">{{year}}</li>
+          {{ filter "year" year ../collections.posts }}
+          {{#each ../filter as |post|}}
+              <li><a href="./{{slugify post.title}}.html">{{post.title}}</a></li> 
+          {{/each}}
+      {{/each}}
+      </ul>
+    
+    
+    </section>
+  </main>
+</body>
+</html>
